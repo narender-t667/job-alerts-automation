@@ -1,6 +1,7 @@
 import smtplib
 from datetime import date
 from email.mime.text import MIMEText
+import os
 
 JOBS = [
     "https://in.linkedin.com/jobs/entry-level-data-science-jobs",
@@ -16,15 +17,13 @@ def send_email():
     msg["From"] = "pavanrayanchu03@gmail.com"
     msg["To"] = "rayanchupavanrayanchu@gmail.com@gmail.com"
 
-    import os
+    email = os.environ["pavanrayanchu03@gmail.com"]
+    app_password = os.environ["Rpavan@03"]
 
-email = os.environ["EMAIL"]
-app_password = os.environ["APP_PASSWORD"]
-
-s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-s.login(email, app_password)
-s.send_message(msg)
+    s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    s.login(email, app_password)
+    s.send_message(msg)
+    s.quit()
 
 if __name__ == "__main__":
     send_email()
-
