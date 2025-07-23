@@ -13,11 +13,11 @@ def send_email():
     body = "📢 Job Links for Today:\n\n" + "\n".join(JOBS)
     msg = MIMEText(body)
     msg["Subject"] = f"{date.today()} – Entry-Level Tech Job Links"
-    msg["From"] = "you@gmail.com"
-    msg["To"] = "you@gmail.com"
+    msg["From"] = "pavanrayanchu03@gmail.com"
+    msg["To"] = "rayanchupavanrayanchu@gmail.com@gmail.com"
 
     s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-    s.login("you@gmail.com", "YOUR_APP_PASSWORD")
+    s.login("pavanrayanchu03@gmail.com", "Rpavan@03")
     s.send_message(msg)
     s.quit()
 
