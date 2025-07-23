@@ -5,7 +5,6 @@ import os
 
 JOBS = {
     "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=entry%20level%20python%20developer-level",
-11|     "AngelList/Wellfound":",
     "Indeed": "https://in.indeed.com/jobs?q=entry+level+python+ml&l=India",
     "Naukri": "https://www.naukri.com/entry-level-data-scientist-jobs",
     "Foundit/Byte": "https://www.foundit.in/search/data-scientist-jobs-entry-level",
@@ -15,6 +14,7 @@ JOBS = {
     "Hirist": "https://www.hirist.com/jobs/search?query=entry+level+ml",
     "Internshala": "https://internshala.com/internships/machine-learning%2C-python-jobs",
 }
+
 def send_email():
     body = "📢 Job Links for Today:\n\n" + "\n".join([f"{k}: {v}" for k, v in JOBS.items()])
     msg = MIMEText(body)
@@ -22,7 +22,7 @@ def send_email():
     msg["From"] = "narendergoud2004@gmail.com"
     msg["To"] = "rayanchupavanrayanchu@gmail.com, prasadvemula016@gmail.com"
     email = "narendergoud2004@gmail.com"
-    app_password ="xwnzbboenwkinbuh"
+    app_password = "xwnzbboenwkinbuh"
 
     s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
     s.login(email, app_password)
