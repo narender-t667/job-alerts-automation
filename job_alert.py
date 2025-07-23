@@ -16,10 +16,14 @@ def send_email():
     msg["From"] = "pavanrayanchu03@gmail.com"
     msg["To"] = "rayanchupavanrayanchu@gmail.com@gmail.com"
 
-    s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-    s.login("pavanrayanchu03@gmail.com", "Rpavan@03")
-    s.send_message(msg)
-    s.quit()
+    import os
+
+email = os.environ["EMAIL"]
+app_password = os.environ["APP_PASSWORD"]
+
+s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+s.login(email, app_password)
+s.send_message(msg)
 
 if __name__ == "__main__":
     send_email()
