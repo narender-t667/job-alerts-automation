@@ -17,8 +17,8 @@ def send_email():
     msg["From"] = "pavanrayanchu03@gmail.com"
     msg["To"] = "rayanchupavanrayanchu@gmail.com@gmail.com"
 
-    email = os.environ["pavanrayanchu03@gmail.com"]
-    app_password = os.environ["Rpavan@03"]
+    email = "pavanrayanchu03@gmail.com"
+    app_password ="Rpavan@03"
 
     s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
     s.login(email, app_password)
