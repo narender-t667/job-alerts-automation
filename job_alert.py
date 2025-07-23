@@ -4,10 +4,15 @@ from email.mime.text import MIMEText
 import os
 
 JOBS = [
-    "https://in.linkedin.com/jobs/entry-level-data-science-jobs",
-    "https://www.indeed.com/q-entry-level-python-developer-jobs.html",
-    "https://angel.co/jobs",
-    "https://internshala.com/internships/machine-learning%2C-python-jobs",
+    "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=entry%20level%20python%20developer",
+    "Indeed": "https://in.indeed.com/jobs?q=entry+level+python+ml&l=India",
+    "Naukri": "https://www.naukri.com/entry-level-data-scientist-jobs",
+    "Foundit/Byte": "https://www.foundit.in/search/data-scientist-jobs-entry-level",
+    "AngelList/Wellfound": "https://wellfound.com/jobs",
+    "Instahyre": "https://www.instahyre.com/jobs/?q=data+scientist+entry+level",
+    "Cutshort": "https://cutshort.io/jobs/entry-level-python-jobs",
+    "Hirist": "https://www.hirist.com/jobs/search?query=entry+level+ml",
+    "Internshala": "https://internshala.com/internships/machine-learning%2C-python-jobs",
 ]
 
 def send_email():
