@@ -20,7 +20,7 @@ def send_email():
     msg = MIMEText(body)
     msg["Subject"] = f"{date.today()} – Entry-Level Tech Job Links"
     msg["From"] = "narendergoud2004@gmail.com"
-    msg["To"] = "rayanchupavanrayanchu@gmail.com, prasadvemula016@gmail.com"
+    msg["To"] = "rayanchupavanrayanchu@gmail.com, prasadvemula016@gmail.com ,sathwikakarnati119@gmail.com"
     email = "narendergoud2004@gmail.com"
     app_password = "xwnzbboenwkinbuh"
 
